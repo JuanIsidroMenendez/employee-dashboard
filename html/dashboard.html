@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestión de Empleados</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>AdminPanel</h1>
+        <nav>
+            <button id="logout-btn" class="btn-logout">Cerrar Sesión</button>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <section class="filter-section">
+            <h3>Filtrar por inicial:</h3>
+            <div id="alphabet-filter" class="alphabet-container">
+                </div>
+        </section>
+
+        <section class="employees-section">
+            <h2>Listado de Empleados</h2>
+            <div id="employees-grid" class="employees-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 - Dashboard de Empleados. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
