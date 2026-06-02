@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JuanIsidroMenendez/employee-dashboard.git"
@@ -19,6 +17,8 @@
   },
   "homepage": "https://github.com/JuanIsidroMenendez/employee-dashboard#readme",
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
     "vitest": "^4.1.8"
   }
 }
