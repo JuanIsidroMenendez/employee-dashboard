@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Gestión de Empleados</title>
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/dashboard.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmployeeSync - Dashboard</title>
+  
+  <link rel="stylesheet" href="../../src/styles/main.css">
+  <link rel="stylesheet" href="../../src/styles/dashboard.css">
+  
+  <script type="module" src="../../main.js" defer></script>
 </head>
 <body>
 
-    <header class="main-header">
-        <h1>AdminPanel</h1>
-        <nav>
-            <button id="logout-btn" class="btn-logout">Cerrar Sesión</button>
-        </nav>
-    </header>
+  <header class="navbar-header">
+    <div class="brand-container">
+      <span class="brand-logo">EmployeeSync</span>
+    </div>
+    <button id="logout-btn" class="btn-secondary">Logout</button>
+  </header>
 
-    <main class="dashboard-content">
-        <section class="filter-section">
-            <h3>Filtrar por inicial:</h3>
-            <div id="alphabet-filter" class="alphabet-container">
-                </div>
-        </section>
+  <div class="view-content">
+    
+    <section class="intro-section">
+      <h1 class="view-title">Employee Directory</h1>
+      <p class="view-subtitle">Manage and view all synchronized personnel records.</p>
+    </section>
 
-        <section class="employees-section">
-            <h2>Listado de Empleados</h2>
-            <div id="employees-grid" class="employees-grid">
-                </div>
-        </section>
-    </main>
+    <section class="search-section">
+      <div class="form-group">
+        <label for="search-input" class="form-label">Search Employees</label>
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="search-input" 
+            class="input-field" 
+            placeholder="Search by name or email..."
+          >
+        </div>
+      </div>
+    </section>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 - Dashboard de Empleados. Todos los derechos reservados.</p>
-    </footer>
+    <section class="filter-section">
+      <nav id="alphabet-filter-nav" class="filter-nav">
+        <button class="btn-filter active" data-letter="all">ALL</button>
+        <button class="btn-filter" data-letter="a">A</button>
+        <button class="btn-filter" data-letter="b">B</button>
+        <button class="btn-filter" data-letter="c">C</button>
+        <button class="btn-filter" data-letter="d">D</button>
+        <button class="btn-filter" data-letter="e">E</button>
+        <button class="btn-filter" data-letter="f">F</button>
+        <button class="btn-filter" data-letter="g">G</button>
+        <button class="btn-filter" data-letter="h">H</button>
+      </nav>
+    </section>
 
-    <script type="module" src="./scripts/main.js"></script>
+    <section id="employees-gallery" class="gallery-grid">
+      </section>
+
+  </div>
+
 </body>
 </html>
