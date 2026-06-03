@@ -1,13 +1,15 @@
-//1 auth.js Validación de formulario de login
-import {validateEmail, validatePassword, loginUser} from "./src/scripts/auth.js";
+import { isAuthenticated, logoutUser } from "./src/scripts/auth.js"; 
+import { employeesMock } from './src/scripts/array.js';
+import { renderEmployees } from './src/scripts/render.js';
+import './src/scripts/search.js'; 
 
-//Mensajes de error
-const ERROR_MESSAGES = {
-    INVALID_EMAIL: "Por favor, ingresa un correo electrónico válido.",
-    INVALID_PASSWORD: "La contraseña debe tener al menos 8 caracteres e incluir al menos un número.",
+// Control de acceso
+if (!isAuthenticated()) {
+    // Si no está logueado redireccionamos al login
+    window.location.href = './index.html'; 
+} else {
+    // Si si está logueado, renderizamos la lista de empleados
+    renderEmployees(employeesMock);
 }
-
-
-
 
 
