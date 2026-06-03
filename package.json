@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "vitest"
   },
@@ -13,14 +14,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
-    "url": "https://github.com/JuanIsidroMenendez/employee-dashboard/issues"
+    "url": "git+https://github.com/JuanIsidroMenendez/employee-dashboard/issues"
   },
-  "homepage": "https://github.com/JuanIsidroMenendez/employee-dashboard#readme",
-  "devDependencies": {
-     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1",
-    "vitest": "^4.1.8"
-  }
+  "homepage": "https://github.com/JuanIsidroMenendez/employee-dashboard#readme"
 }
