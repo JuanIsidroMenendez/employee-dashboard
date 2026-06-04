@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.employee.filter {
+    display: none !important;
+}
+

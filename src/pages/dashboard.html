@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EmployeeSync - Dashboard</title>
   
-  <link rel="stylesheet" href="../../src/styles/main.css">
-  <link rel="stylesheet" href="../../src/styles/dashboard.css">
+  <link rel="stylesheet" href="../../src/styles/output.css">
   
   <script type="module" src="../../main.js" defer></script>
 </head>
@@ -32,7 +31,7 @@
         <div class="input-wrapper">
           <input 
             type="text" 
-            id="search-input" 
+            id="search"     
             class="input-field" 
             placeholder="Search by name or email..."
           >
@@ -40,24 +39,13 @@
       </div>
     </section>
 
-    <section class="filter-section">
-      <nav id="alphabet-filter-nav" class="filter-nav">
-        <button class="btn-filter active" data-letter="all">ALL</button>
-        <button class="btn-filter" data-letter="a">A</button>
-        <button class="btn-filter" data-letter="b">B</button>
-        <button class="btn-filter" data-letter="c">C</button>
-        <button class="btn-filter" data-letter="d">D</button>
-        <button class="btn-filter" data-letter="e">E</button>
-        <button class="btn-filter" data-letter="f">F</button>
-        <button class="btn-filter" data-letter="g">G</button>
-        <button class="btn-filter" data-letter="h">H</button>
-      </nav>
-    </section>
+  
 
-    <section id="employees-gallery" class="gallery-grid">
+    <section id="employee-gallery" class="gallery-grid">
       </section>
-
   </div>
+
+<script type="module" src="../../main.js" defer></script>
 
 </body>
 </html>
