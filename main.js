@@ -1,4 +1,4 @@
-import { isAuthenticated, logoutUser } from "./src/scripts/auth.js"; 
+import { isAuthenticated, logoutUser } from "./src/scripts/storage.js"; 
 import { employeesMock } from './src/scripts/array.js';
 import { renderEmployees } from './src/scripts/render.js';
 import './src/scripts/search.js'; 
