@@ -7,33 +7,27 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-red-600: oklch(57.7% 0.245 27.325);
-    --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-gray-50: oklch(98.5% 0.002 247.839);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-cyan-400: oklch(78.9% 0.154 211.53);
+    --color-indigo-400: oklch(67.3% 0.182 276.935);
+    --color-indigo-500: oklch(58.5% 0.233 277.117);
+    --color-indigo-600: oklch(51.1% 0.262 276.966);
+    --color-violet-500: oklch(60.6% 0.25 292.717);
+    --color-violet-600: oklch(54.1% 0.281 293.009);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-slate-950: oklch(12.9% 0.042 264.695);
     --color-white: #fff;
-    --spacing: 0.25rem;
     --container-7xl: 80rem;
+    --text-xs: 0.75rem;
     --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
     --font-weight-medium: 500;
-    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
-    --tracking-tight: -0.025em;
-    --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -195,6 +189,129 @@
 }
 .employee.filter {
   display: none !important;
+}
+body {
+  background: radial-gradient(circle at 50% 50%, var(--color-slate-900) 0%, #020617 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: var(--font-sans);
+  color: var(--color-slate-100);
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 28rem;
+  margin: auto 0;
+}
+.login-card {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: var(--radius-2xl);
+  border: 2px solid var(--color-indigo-500);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+  text-align: center;
+}
+.login-card h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-extrabold);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, var(--color-indigo-400), var(--color-cyan-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-card p {
+  color: var(--color-slate-400);
+  font-size: var(--text-sm);
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.025em;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.form-group label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-cyan-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-slate-950);
+  border: 2px solid var(--color-slate-800);
+  border-radius: var(--radius-xl);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: all var(--default-transition-duration) var(--default-transition-timing-function);
+}
+.form-group input:focus {
+  border-color: var(--color-cyan-400);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+.login-card button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-indigo-600) 0%, var(--color-violet-600) 100%);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xl);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+.login-card button[type="submit"]:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--color-indigo-500) 0%, var(--color-violet-500) 100%);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+#employee-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: var(--container-7xl);
+  margin: 0 auto;
+  padding: 1rem;
+}
+@media (min-width: 640px) {
+  #employee-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  #employee-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  #employee-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.employee {
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-2xl);
+  border: 2px solid var(--color-indigo-500);
 }
 @property --tw-blur {
   syntax: "*";
