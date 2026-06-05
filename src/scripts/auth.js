@@ -2,8 +2,29 @@
 // Modulación auth.js
 
 export const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
 export const validatePassword = pass => pass.length >= 8 && /\d/.test(pass);
+
+
+import { validUser } from './user.js';
+import { loginUser } from './storage.js';
+
+if (!window.location.pathname.includes('dashboard.html')) {
+    document.getElementById('login-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+
+        if (validUser.some(u => u.email === email && u.password === password)) {
+            loginUser();
+            window.location.href = './src/pages/dashboard.html';
+        } else {
+            alert('Correo electrónico o contraseña incorrectos.');
+        }
+    });
+}
+
+
+
 
 
 
