@@ -1,8 +1,6 @@
 [
-{
-   
-    "email":"patowillix@admin.es",
-    "password":"password123"
-    
-}
+  {
+    "email": "admin@test.com",
+    "password": "password123"
+  }
 ]
