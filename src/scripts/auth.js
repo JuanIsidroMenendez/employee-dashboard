@@ -1,15 +1,11 @@
 // Refactorización del código:
+// Modulación auth.js
 
 export const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 export const validatePassword = pass => pass.length >= 8 && /\d/.test(pass);
 
-export const loginUser = () => localStorage.setItem('isLoggedIn', 'true');
 
-export const logoutUser = () => localStorage.removeItem('isLoggedIn');
-
-export const isAuthenticated = () => localStorage.getItem('isLoggedIn') === 'true';
-    
 
 // Valida si un texto tiene un formato de email válido (expresión regular o regex).
 //Deberá retornar true o false dependiendo de si el formato es correcto o no.
