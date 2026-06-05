@@ -1,6 +1,3 @@
-export const loginUser = () => localStorage.setItem('isLoggedIn', 'true');
-
-export const logoutUser = () => localStorage.removeItem('isLoggedIn');
-
-export const isAuthenticated = () => localStorage.getItem('isLoggedIn') === 'true';
-    
+export const loginUser = () => localStorage.setItem('authenticated', 'true');
+export const logoutUser = () => localStorage.removeItem('authenticated');
+export const isAuthenticated = () => localStorage.getItem('authenticated') === 'true';

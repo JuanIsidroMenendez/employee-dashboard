@@ -1,8 +1,2 @@
-// Credenciales del administrador
-
-export const validUser = [
-  {
-    email: "donpato@admin.com",
-    password: "password123"
-  },
-];
+import j from '../db/user.json' with { type: 'json' };
+export const validUser = j;
